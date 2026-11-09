@@ -6,9 +6,9 @@ document.querySelectorAll('.chips button').forEach(b=>b.addEventListener('click'
  document.querySelectorAll('[data-cat]').forEach(c=>c.hidden=!(b.dataset.f==='all'||c.dataset.cat===b.dataset.f))}));
 const f=document.getElementById('qf');
 if(f){const p=new URLSearchParams(location.search).get('product');if(p)f.interest.value=p;
- const msg=()=>{const d=new FormData(f);return `Quote request - Repurpose Textiles\nName: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')}\nInterested in: ${d.get('interest')}\nDetails: ${d.get('message')}`};
+ const msg=()=>{const d=new FormData(f);return `Enquiry - Repurpose Textiles\nName: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\nPhone: ${d.get('phone')}\nInterested in: ${d.get('interest')}\nDetails: ${d.get('message')}`};
  document.getElementById('sw').addEventListener('click',()=>{if(f.reportValidity())open('https://wa.me/19723810260?text='+encodeURIComponent(msg()))});
- f.addEventListener('submit',e=>{e.preventDefault();location.href='mailto:info@YOUR-DOMAIN.com?subject='+encodeURIComponent('Quote request')+'&body='+encodeURIComponent(msg())})}
+ f.addEventListener('submit',e=>{e.preventDefault();location.href='mailto:info@YOUR-DOMAIN.com?subject='+encodeURIComponent('Enquiry')+'&body='+encodeURIComponent(msg())})}
 document.querySelectorAll('.pill').forEach(function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')==='true',h=document.querySelector('.pp .hint');
  document.querySelectorAll('.pill').forEach(function(x){x.setAttribute('aria-pressed','false')});
  document.querySelectorAll('.pp .card').forEach(function(c){c.hidden=true});
